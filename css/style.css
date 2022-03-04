@@ -1,0 +1,560 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  scroll-behavior: smooth;
+  text-overflow: ellipsis;
+}
+
+html, body {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+* ::-webkit-scrollbar {
+  width: 3px;
+  display: none;
+}
+
+* ::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+* ::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #aca9a9;
+}
+
+* ::-webkit-scrollbar-thumb:hover {
+  background-color: gray;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  height: 100%;
+  width: 100;
+}
+
+.container #nav {
+  background-color: #202c33;
+  color: white;
+  height: 6rem;
+}
+
+.container #nav .nav-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem;
+}
+
+.container #nav .nav-items button {
+  margin-left: 0.5rem;
+  color: white;
+  border: none;
+  background: none;
+}
+
+.container #nav #botones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container #nav #botones a {
+  color: #ffffff;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0.41rem;
+  padding-bottom: none;
+  line-height: 1.5;
+  font-size: 15px;
+  position: relative;
+}
+
+.container #nav #botones a .insignia {
+  margin-left: 0.2rem;
+  text-align: center;
+  border-radius: 100%;
+  background-color: white;
+  width: 1rem;
+  height: 1rem;
+  color: #008069;
+}
+
+.container #nav #botones a .material-icons {
+  margin-left: 0.2rem;
+  line-height: 1rem;
+  font-size: 9px;
+}
+
+.container #nav #botones #cam {
+  color: white;
+  width: 1rem;
+}
+
+.container main {
+  width: 100%;
+  height: 100%;
+  overflow-x: auto;
+}
+
+.container main #cont {
+  width: 400%;
+  height: calc(100vh - 5rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+}
+
+.container main #cont section {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.container main #cont #section-chats {
+  background-color: #111b21;
+  color: white;
+  position: relative;
+}
+
+.container main #cont #section-chats #icon-chat {
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+  width: 3rem;
+  height: 3rem;
+  text-align: center;
+  line-height: 2.1;
+  border-radius: 100%;
+  background-color: #00a884;
+}
+
+.container main #cont #section-chats article {
+  position: relative;
+  height: 3.3rem;
+  margin: 0.6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+}
+
+.container main #cont #section-chats article div {
+  width: 82%;
+  padding: 0.25rem;
+}
+
+.container main #cont #section-chats article div span {
+  font-size: 15px;
+}
+
+.container main #cont #section-chats article div #time {
+  position: absolute;
+  top: 0.5rem;
+  right: 0;
+}
+
+.container main #cont #section-chats article div small {
+  color: #81919a;
+}
+
+.container main #cont #section-chats article div .circle {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0;
+  background-color: #00a884;
+  text-align: center;
+  line-height: 1.2;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 100%;
+}
+
+.container main #cont #section-chats article div .circle small {
+  color: #111b21;
+}
+
+.container main #cont #section-chats article img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 100%;
+  height: 3rem;
+  width: 3rem;
+  margin-right: 0.5rem;
+}
+
+.container main #cont #section-states {
+  background-color: #111b21;
+  color: white;
+}
+
+.container main #cont #section-states article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  height: 3.3rem;
+  margin: 0.6rem;
+}
+
+.container main #cont #section-states article .cont-circulo {
+  width: 3.5rem;
+}
+
+.container main #cont #section-states article div {
+  position: relative;
+  top: 0.3rem;
+  width: 82%;
+  padding: 0.25rem;
+}
+
+.container main #cont #section-states article img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 100%;
+  height: 3rem;
+  width: 3rem;
+  margin-right: 0.5rem;
+}
+
+.container main #cont #section-states article span {
+  position: relative;
+  top: 0.8rem;
+}
+
+.container main #cont #section-states .spam {
+  font-size: 12px;
+  margin-left: 1rem;
+}
+
+.container main #cont #section-call {
+  background-color: #111b21;
+  color: white;
+}
+
+.container main #cont #section-call article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  height: 3.3rem;
+  margin: 0.6rem;
+}
+
+.container main #cont #section-call article div {
+  position: relative;
+  top: 0.3rem;
+  width: 82%;
+  padding: 0.25rem;
+}
+
+.container main #cont #section-call article div .ms {
+  position: relative;
+  line-height: 0;
+}
+
+.container main #cont #section-call article div .ms span {
+  position: absolute;
+  top: 0;
+  font-size: 15px;
+}
+
+.container main #cont #section-call article div .ms small {
+  margin-left: 1.5rem;
+}
+
+.container main #cont #section-call article img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 100%;
+  height: 3rem;
+  width: 3rem;
+  margin-right: 0.5rem;
+}
+
+.container main #cont #section-call article span {
+  position: relative;
+  top: 0.8rem;
+}
+
+#chat-person {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#chat-person nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  background-color: #202c33;
+  color: white;
+  height: 1.6rem;
+  padding: 0.5rem;
+}
+
+#chat-person nav #name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  width: 75%;
+}
+
+#chat-person nav #name #flecha {
+  position: relative;
+  top: 0.3rem;
+  font-size: 17px;
+}
+
+#chat-person nav #name img {
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 100%;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+}
+
+#chat-person nav #name h5 {
+  position: relative;
+  top: 0.3rem;
+}
+
+#chat-person nav #call {
+  width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#chat-person nav #call span {
+  position: relative;
+  top: 0.3rem;
+  font-size: 15px;
+}
+
+#chat-person #fondo {
+  width: 100%;
+  height: 100%;
+  background-image: url(../imagenes/fondo.jpg);
+  background-size: cover;
+  height: calc( 100% - 2.1rem);
+}
+
+#chat-person #fondo #menssage {
+  height: calc( 100% - 2.9rem);
+  overflow: auto;
+  color: white;
+}
+
+#chat-person #fondo #menssage .men-1 {
+  margin: 0.5rem;
+  background-color: #202c33;
+  width: auto;
+  height: 1rem;
+  margin-right: 25%;
+  border-radius: 0.6rem;
+  position: relative;
+  padding: 0.5rem;
+}
+
+#chat-person #fondo #menssage .men-2 {
+  margin: 0.5rem;
+  background-color: #005c4b;
+  width: auto;
+  height: 1rem;
+  margin-left: 25%;
+  border-radius: 0.6rem;
+  position: relative;
+  padding: 0.5rem;
+}
+
+#chat-person #fondo #menssage #time-chat {
+  position: absolute;
+  bottom: 0.2rem;
+  right: 0.5rem;
+  color: #7baba2;
+}
+
+#chat-person #fondo #menssage #time-chat span {
+  font-size: 15px;
+}
+
+#chat-person #fondo #menssage footer {
+  width: calc(100% - 0.5rem);
+  position: absolute;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.2rem;
+  background-color: none;
+}
+
+#chat-person #fondo #menssage footer div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  border-radius: 1rem;
+  width: calc( 100% - 2.6rem);
+  padding: 0.1rem;
+  padding-left: 0.4rem;
+  background-color: #202c33;
+}
+
+#chat-person #fondo #menssage footer div span {
+  position: relative;
+  top: 0.3rem;
+  font-size: 18px;
+  color: white;
+  margin-right: 0.6rem;
+}
+
+#chat-person #fondo #menssage footer div #ganchito {
+  -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
+}
+
+#chat-person #fondo #menssage footer div input {
+  position: relative;
+  top: 0.2rem;
+  width: calc( 100% - 6rem);
+  border: none;
+  width: 100%;
+  height: 1.2rem;
+  outline: none;
+  background-color: #202c33;
+}
+
+#chat-person #fondo #menssage footer #mic {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 1.8;
+  color: white;
+  font-size: 18px;
+  background-color: gray;
+}
+
+.ancla-girada {
+  -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
+}
+
+.ignorado {
+  color: #81919a;
+}
+
+.visto {
+  color: #53bdeb;
+}
+
+.select {
+  border-bottom: 2px solid white;
+}
+
+.phone_missed {
+  color: red;
+  border: 3px solid red;
+}
+
+.circulo {
+  background-image: url(../imagenes/estado.jpg);
+  background-size: cover;
+  border-radius: 100%;
+}
+
+.right {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+}
+
+.perdida {
+  color: red;
+}
+
+.recibida {
+  color: #25d366;
+}
+/*# sourceMappingURL=style.css.map */

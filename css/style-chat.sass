@@ -1,0 +1,169 @@
+#chat-person
+    position: absolute
+    top: 0
+    right: 100%
+    width: 100%
+    height: 100%
+    display: flex
+    flex-flow: column
+    justify-content: space-between
+
+    nav
+        display: flex
+        flex-flow: row
+        background-color: #202c33
+        color: white
+        height: 1.6rem
+        padding: 0.5rem
+
+        #name
+            display: flex
+            flex-flow: row
+            width: 75%
+
+            #flecha
+                position: relative
+                top: 0.3rem
+                font-size: 17px
+            #flecha:hover
+                cursor: pointer
+            img
+                width: 1.6rem
+                height: 1.6rem
+                border-radius: 100%
+                margin-left: 0.3rem
+                margin-right: 0.3rem
+            img:hover
+                cursor: pointer
+            h5
+                position: relative
+                top: 0.3rem
+        #call
+            width: 25%
+            display: flex
+            flex-flow: row
+            justify-content: space-between
+
+            span
+                position: relative
+                top: 0.3rem
+                font-size: 15px
+
+    #fondo
+        width: 100%
+        height: 100%
+        background-color: #111b21
+        background-size: cover
+        height: calc( 100% - 2.1rem )
+
+        #menssage
+            height: calc( 100% - 2.9rem )
+            overflow: auto
+            color: white
+
+            // #day
+            //     padding: 0.5rem
+            //     background-color: #182229
+            //     border-radius: 10px
+            //     position: relative
+            //     top: 1rem
+            //     left: calc( 50% - 1rem)
+
+            .men-1
+                margin: 0.5rem
+                background-color: #202c33
+                width: fit-content
+                height: auto
+                margin-right: 25%
+                border-radius: 0.6rem
+                position: relative
+                padding: 0.7rem
+
+                img
+                    width: 7rem
+                    height: 7rem
+                    object-fit: cover
+                video
+                    width: 14rem
+                    height: 10rem
+
+            .men-2
+                margin: 0.5rem
+                background-color: #005c4b
+                // width: 72%
+                height: auto
+                margin-left: 25%
+                border-radius: 0.6rem
+                position: relative
+                padding: 0.7rem
+
+                img
+                    width: 7rem
+                    height: 7rem
+                    object-fit: cover
+                audio
+                    width: 13rem
+
+            #time-chat
+                position: absolute
+                bottom: 0.2rem
+                right: 0.5rem
+                color: #7baba2
+
+                span
+                    font-size: 15px
+            footer
+                width: calc(100% - 0.5rem)
+                position: absolute
+                bottom: 0
+                display: flex
+                flex-flow: row
+                justify-content: space-between
+                padding: 0.2rem
+                background-color: none
+
+                div
+                    display: flex
+                    flex-flow: row
+                    border-radius: 1rem
+                    width: calc( 100% - 2.9rem )
+                    padding: 0.1rem
+                    padding-left: 0.4rem
+                    background-color: #202c33
+
+                    span
+                        position: relative
+                        top: 0.3rem
+                        font-size: 18px
+                        color: white
+                        margin-right: 0.6rem
+                        color: #81919a
+
+                    #ganchito
+                        transform: rotateZ(45deg)
+
+                    input
+                        position: relative
+                        top: 0.2rem
+                        width: calc( 100% - 6rem )
+                        border: none
+                        height: 1.2rem
+                        outline: none
+                        background-color: #202c33
+
+                #mic
+                    width: 2rem
+                    height: 2rem
+                    border-radius: 100%
+                    text-align: center
+                    line-height: 1.8
+                    color: white
+                    font-size: 18px
+                    background-color: gray
+
+#responder
+    background: #171f24
+    color: white
+    padding: 0.2rem
+    border-radius: 4px
+    border-left: 4px solid #06cf9c

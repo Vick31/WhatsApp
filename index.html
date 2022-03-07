@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style-interfaz.css">
+    <link rel="stylesheet" href="./css/style-chat.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
 </head>
@@ -24,11 +25,24 @@
                         </span>
                     </button>
 
-                    <button id="puntos">
+                    <button id="puntos" onclick="mostrar_temas();">
                         <span class="material-icons">
                             more_vert
                         </span>
                     </button>
+
+                    <form id="temas">
+                        <span>Elige un tema</span>
+                        <div>
+                            <input type="radio" value="1" class="tema-claro" onclick="tema_claro();">
+                            <span onclick="tema_claro();">Claro</span>
+                        </div>
+                        <div>
+                            <input type="radio" value="2" class="tema-oscuro" onclick="tema_oscuro();">
+                            <span onclick="tema_oscuro();">Oscuro</span>
+                        </div>
+                    </form>
+
                 </div>
             </div>
 
@@ -65,9 +79,9 @@
 
         <main>
             <div id="cont">
-                <section id="section-cam">
+                <!-- <section id="section-cam">
 
-                </section>
+                </section> -->
 
                 <section id="section-chats">
 
@@ -81,7 +95,7 @@
                             <p>
                                 ADSI 2339898
                             </p>
-                            <small style="color: white">
+                            <small>
                                 Intructor: Buenas tardes muchachos
                             </small>
                             <small id="time">
@@ -132,11 +146,11 @@
                         </div>
                     </article>
 
-                    <article>
-                        <img src="./imagenes/vick.jfif">
+                    <article onclick="mostrar();">
+                        <img src="./imagenes/pp.jfif">
                         <div>
                             <p>
-                                Victoria
+                                Vick
                             </p>
                             <span class="material-icons perdida">
                                 missed_video_call
@@ -155,7 +169,7 @@
                             <p>
                                 ADSI 2339898
                             </p>
-                            <small style="color: white">
+                            <small>
                                 Intructor: Buenas tardes muchachos
                             </small>
                             <small id="time">
@@ -198,7 +212,7 @@
                                 missed_video_call
                             </span>
                             <small>
-                               Videollamada perdida
+                                Videollamada perdida
                             </small>
                             <small id="time">
                                 11:02 am
@@ -284,7 +298,7 @@
                             <p>
                                 ADSI 2339898
                             </p>
-                            <small style="color: white">
+                            <small>
                                 Intructor: Buenas tardes muchachos
                             </small>
                             <small id="time">
@@ -696,313 +710,173 @@
                 </section>
             </div>
 
-        </main>
-
-
-        <section id="chat-person" style="display: none">
-            <nav id="nav-chat">
-                <div id="name">
-                    <span class="material-icons" id="flecha">
-                        arrow_back
-                    </span>
-                    <img src="./imagenes/pp.jfif" alt="">
-                    <h5>
-                        Vick
-                    </h5>
-                </div>
-                <div id="call">
-                    <span class="material-icons">
-                        videocam
-                    </span>
-                    <span class="material-icons">
-                        call
-                    </span>
-
-                    <span class="material-icons">
-                        more_vert
-                    </span>
-                </div>
-            </nav>
-
-            <div id="fondo">
-                <section id="menssage">
-
-                    <span id="day">
-                        Hoy
-                    </span>
-
-                    <article class="men-1">
-                        <small>
-                            Hola
-                            <small id="time-chat">
-                                1:00 pm
-                            </small>
-                        </small>
-                    </article>
-
-                    <article class="men-2">
-                        <small>
-                            Hola
-                            <small id="time-chat">
-                                1:01 pm
-                                <span class="material-icons" id="visto">
-                                    done_all
-                                </span>
-                            </small>
-                        </small>
-                    </article>
-
-                    <article class="men-1">
-                        <small>
-                            ¿Como estas?
-                            <small id="time-chat">
-                                1:01 pm
-                            </small>
-                        </small>
-                    </article>
-
-                    <article class="men-2">
-                        <small>
-                            Bien y ¿usted?
-                            <small id="time-chat">
-                                1:03 pm
-                                <span class="material-icons" id="visto">
-                                    done_all
-                                </span>
-                            </small>
-                        </small>
-                    </article>
-
-                    <article class="men-1">
-                        <small>
-                            <small id="time-chat">
-                                1:03 pm
-                            </small>
-                        </small>
-                    </article>
-
-                    <article class="men-2">
-                        <small>
-                            <small id="time-chat">
-                                1:10 pm
-                                <span class="material-icons" id="visto">
-                                    done_all
-                                </span>
-                            </small>
-                        </small>
-                    </article>
-
-                    <article class="men-1">
-                        <small>
-                            <small id="time-chat">
-                                1:17 pm
-                            </small>
-                        </small>
-                    </article>
-
-                    <article class="men-2">
-                        <small>
-                            <small id="time-chat">
-                                1:30 pm
-                                <span class="material-icons" id="visto">
-                                    done_all
-                                </span>
-                            </small>
-                        </small>
-                    </article>
-
-                    <article class="men-1">
-                        <small>
-                            <small id="time-chat">
-                                2:10 pm
-                            </small>
-                        </small>
-                    </article>
-
-                    <article class="men-2">
-                        <small>
-                            <small id="time-chat">
-                                2:11 pm
-                                <span class="material-icons" id="visto">
-                                    done_all
-                                </span>
-                            </small>
-                        </small>
-                    </article>
-
-                    <article class="men-1">
-                        <small>
-                            <small id="time-chat">
-                                2:25 pm
-                            </small>
-                        </small>
-                    </article>
-
-                    <article class="men-2">
-                        <small>
-                            <small id="time-chat">
-                                2:45 pm
-                                <span class="material-icons" id="visto">
-                                    done_all
-                                </span>
-                            </small>
-                        </small>
-                    </article>
-
-                    <article class="men-1">
-                        <small>
-                            <small id="time-chat">
-                                2:46 pm
-                            </small>
-                        </small>
-                    </article>
-
-                    <article class="men-2">
-                        <small>
-                            <small id="time-chat">
-                                3:01 pm
-                                <span class="material-icons" id="visto">
-                                    done_all
-                                </span>
-                            </small>
-                        </small>
-                    </article>
-                    <article class="men-1">
-                        <small>
-                            <small id="time-chat">
-                                1:01 pm
-                            </small>
-                        </small>
-                    </article>
-
-                    <article class="men-2">
-                        <small>
-                            <small id="time-chat">
-                                1:03 pm
-                                <span class="material-icons" id="visto">
-                                    done_all
-                                </span>
-                            </small>
-                        </small>
-                    </article>
-
-                    <article class="men-1">
-                        <small>
-                            <small id="time-chat">
-                                1:03 pm
-                            </small>
-                        </small>
-                    </article>
-
-                    <article class="men-2">
-                        <small>
-                            <small id="time-chat">
-                                1:10 pm
-                                <span class="material-icons" id="visto">
-                                    done_all
-                                </span>
-                            </small>
-                        </small>
-                    </article>
-
-                    <article class="men-1">
-                        <small>
-                            <small id="time-chat">
-                                1:17 pm
-                            </small>
-                        </small>
-                    </article>
-
-                    <article class="men-2">
-                        <small>
-                            <small id="time-chat">
-                                1:30 pm
-                                <span class="material-icons" id="visto">
-                                    done_all
-                                </span>
-                            </small>
-                        </small>
-                    </article>
-
-                    <article class="men-1">
-                        <small>
-                            <small id="time-chat">
-                                2:10 pm
-                            </small>
-                        </small>
-                    </article>
-
-                    <article class="men-2">
-                        <small>
-                            <small id="time-chat">
-                                2:11 pm
-                                <span class="material-icons" id="visto">
-                                    done_all
-                                </span>
-                            </small>
-                        </small>
-                    </article>
-
-                    <article class="men-1">
-                        <small>
-                            <small id="time-chat">
-                                2:25 pm
-                            </small>
-                        </small>
-                    </article>
-
-                    <article class="men-2">
-                        <small>
-                            <small id="time-chat">
-                                2:45 pm
-                                <span class="material-icons" id="visto">
-                                    done_all
-                                </span>
-                            </small>
-                        </small>
-                    </article>
-
-                    <article class="men-1">
-                        <small>
-                            <small id="time-chat">
-                                2:46 pm
-                            </small>
-                        </small>
-                    </article>
-
-                    <article class="men-2">
-                        <small>
-                            <small id="time-chat">
-                                3:01 pm
-                                <span class="material-icons">
-                                    done_all
-                                </span>
-                            </small>
-                        </small>
-                    </article>
-
-                    <footer>
-                        <div>
+            <div>
+                <section id="chat-person">
+                    <nav id="nav-chat">
+                        <div id="name">
+                            <span class="material-icons" id="flecha" onclick="quitar();">
+                                arrow_back
+                            </span>
+                            <img src="./imagenes/pp.jfif" alt="" onclick="quitar();">
+                            <h5>
+                                Vick
+                            </h5>
+                        </div>
+                        <div id="call">
                             <span class="material-icons">
-                                emoji_emotions
+                                videocam
                             </span>
-                            <input type="text" placeholder="Mensaje">
-                            <span class="material-icons" id="ganchito">
-                                attachment
+                            <span class="material-icons">
+                                call
                             </span>
-                            <span class="material-icons" id="cam">
-                                camera_alt
+
+                            <span class="material-icons">
+                                more_vert
                             </span>
                         </div>
-                        <span class="material-icons" id="mic">
-                            mic
-                        </span>
-                    </footer>
+                    </nav>
+
+                    <div id="fondo">
+                        <section id="menssage">
+
+                            <!-- <span id="day">
+                                Hoy
+                            </span> -->
+
+                            <article class="men-1">
+                                <small>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, architecto?
+                                    <small id="time-chat">
+                                        1:00 pm
+                                    </small>
+                                </small>
+                            </article>
+
+                            <article class="men-2">
+                                <small>
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos sequi expedita necessitatibus.
+                                    <small id="time-chat">
+                                        1:01 pm
+                                        <span class="material-icons visto">
+                                            done_all
+                                        </span>
+                                    </small>
+                                </small>
+                            </article>
+
+                            <article class="men-1">
+                                <small>
+                                   <img src="./imagenes/foto-chat.jpg" alt="">
+                                    <small id="time-chat">
+                                        1:01 pm
+                                    </small>
+                                </small>
+                            </article>
+
+                            <article class="men-2">
+                                <small>
+                                    😂🤣😂🤣😂🤣😂🤣
+                                    <small id="time-chat">
+                                        1:03 pm
+                                        <span class="material-icons visto">
+                                            done_all
+                                        </span>
+                                    </small>
+                                </small>
+                            </article>
+
+                            <article class="men-1">
+                                <img src="./imagenes/48cd7b815fdb1d1bd532d448553b2b79.gif" alt="">
+                                <small>
+                                    <small id="time-chat">
+                                        1:03 pm
+                                    </small>
+                                </small>
+                            </article>
+
+                            <article class="men-2">
+                                <small>
+                                    <img src="./imagenes/duck.gif" alt="">
+                                    <small id="time-chat">
+                                        1:10 pm
+                                        <span class="material-icons visto">
+                                            done_all
+                                        </span>
+                                    </small>
+                                </small>
+                            </article>
+
+                            <article class="men-1">
+                                <small>
+                                    <video src="./videos/goku me lo voy a cojer.mp4" controls></video>
+                                    <small id="time-chat">
+                                        1:17 pm
+                                    </small>
+                                </small>
+                            </article>
+
+                            <article class="men-2">
+                                <small>
+                                    JAJAJAJAJAJAJAJAJAJAJAJA
+                                    <small id="time-chat">
+                                        1:30 pm
+                                        <span class="material-icons visto">
+                                            done_all
+                                        </span>
+                                    </small>
+                                </small>
+                            </article>
+
+                            <article class="men-1">
+                                <small>
+                                    <div id="responder">
+                                        Tu <br>
+                                        <small>JAJAJAJAJAJAJAJAJAJAJAJA</small>
+                                    </div>
+                                    <video src="./videos/My name is Jeff.mp4" controls></video>
+                                    <small id="time-chat">
+                                        2:10 pm
+                                    </small>
+                                </small>
+                            </article>
+
+                            <article class="men-2">
+                                <small>
+                                    <audio src="./audio/Sonido de Pedo Efecto de sonido.mp3" controls></audio>
+                                    <small id="time-chat">
+                                        2:11 pm
+                                        <span class="material-icons visto">
+                                            done_all
+                                        </span>
+                                    </small>
+                                </small>
+                            </article>
+
+                            <footer>
+                                <div class="mensaje-chat">
+                                    <span class="material-icons">
+                                        emoji_emotions
+                                    </span>
+                                    <input type="text" placeholder="Mensaje" class="mensaje-chat">
+                                    <span class="material-icons" id="ganchito">
+                                        attachment
+                                    </span>
+                                    <span class="material-icons" id="cam">
+                                        camera_alt
+                                    </span>
+                                </div>
+                                <span class="material-icons" id="mic">
+                                    mic
+                                </span>
+                            </footer>
+                        </section>
+                    </div>
                 </section>
             </div>
-        </section>
-
+        </main>
     </div>
+
+    <script src="./script/script.js"></script>
 </body>
 
 </html>

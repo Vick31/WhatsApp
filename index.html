@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="./css/style-interfaz.css">
     <link rel="stylesheet" href="./css/style-chat.css">
+    <link rel="stylesheet" href="./css/style-cam.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
 </head>
@@ -17,15 +18,15 @@
     <div class="container">
         <nav id="nav">
             <div class="nav-items">
-                <h4>WhatsApp</h4>
+                <h5>WhatsApp</h5>
                 <div>
-                    <button id="button">
+                    <button id="nav-button-search">
                         <span class="material-icons">
                             search
                         </span>
                     </button>
 
-                    <button id="puntos" onclick="mostrar_temas();">
+                    <button id="nav-butto-point" onclick="mostrar_temas();">
                         <span class="material-icons">
                             more_vert
                         </span>
@@ -34,11 +35,11 @@
                     <form id="temas">
                         <span>Elige un tema</span>
                         <div>
-                            <input type="radio" value="1" class="tema-claro" onclick="tema_claro();">
+                            <input type="radio" value="1" class="tema-clear" onclick="tema_claro();">
                             <span onclick="tema_claro();">Claro</span>
                         </div>
                         <div>
-                            <input type="radio" value="2" class="tema-oscuro" onclick="tema_oscuro();">
+                            <input type="radio" value="2" class="tema-dark" onclick="tema_oscuro();">
                             <span onclick="tema_oscuro();">Oscuro</span>
                         </div>
                     </form>
@@ -46,9 +47,9 @@
                 </div>
             </div>
 
-            <section id="botones">
+            <section id="nav-anchor">
 
-                <a href="#section-cam" class="material-icons" id="cam">
+                <a href="#section-cam" class="material-icons" id="cam-button">
                     camera_alt
                 </a>
 
@@ -61,7 +62,7 @@
 
                 <a href="#section-states">
                     <h5>ESTADOS</h5>
-                    <small class="material-icons">
+                    <small class="material-icons punto">
                         fiber_manual_record
                     </small>
                 </a>
@@ -78,10 +79,41 @@
 
 
         <main>
-            <div id="cont">
-                <!-- <section id="section-cam">
+            <div id="main-container">
+                <section id="section-cam">
+                    <div class="cam-slayer">
+                        <img src="https://api.lorem.space/image/face?w=150&h=150" alt="">
+                        <img src="https://api.lorem.space/image/face?w=150&h=150" alt="">
+                        <img src="https://api.lorem.space/image/face?w=150&h=150" alt="">
+                        <img src="https://api.lorem.space/image/face?w=150&h=150" alt="">
+                        <img src="https://api.lorem.space/image/face?w=150&h=150" alt="">
+                        <img src="https://api.lorem.space/image/face?w=150&h=150" alt="">
+                        <img src="https://api.lorem.space/image/face?w=150&h=150" alt="">
+                        <img src="https://api.lorem.space/image/face?w=150&h=150" alt="">
+                        <img src="https://api.lorem.space/image/face?w=150&h=150" alt="">
+                        <img src="https://api.lorem.space/image/face?w=150&h=150" alt="">
+                        <img src="https://api.lorem.space/image/face?w=150&h=150" alt="">
+                        <img src="https://api.lorem.space/image/face?w=150&h=150" alt="">
+                        <img src="https://api.lorem.space/image/face?w=150&h=150" alt="">
+                        <img src="https://api.lorem.space/image/face?w=150&h=150" alt="">
+                        <img src="https://api.lorem.space/image/face?w=150&h=150" alt="">
+                        <img src="https://api.lorem.space/image/face?w=150&h=150" alt="">
+                    </div>
+                    <div class="cam-button">
+                        <button class="cam-item">
+                            <span class="material-icons">
+                                flash_on
+                            </span>
+                        </button>
+                        <button class="cam-captur"></button>
+                        <button class="cam-item">
+                            <span class="material-icons">
+                                flip_camera_ios
+                            </span>
+                        </button>
+                    </div>
+                </section>
 
-                </section> -->
 
                 <section id="section-chats">
 
@@ -90,14 +122,36 @@
                     </span>
 
                     <article>
+                        <img src="./imagenes/vick.jfif">
+                        <div class="name-text">
+                            <p>
+                                Victoria
+                            </p>
+                            <small>
+                                Ah bueno
+                            </small>                        
+                        </div>
+                        <div class="indicativos">
+                            <small id="time">
+                                1:00 pm
+                            </small>
+                            <span class="material-icons ignorado ancla-girada">
+                                push_pin
+                            </span>
+                        </div>
+                    </article>
+
+                    <article>
                         <img src="./imagenes/adsi.JPG">
-                        <div>
+                        <div class="name-text">
                             <p>
                                 ADSI 2339898
                             </p>
                             <small>
                                 Intructor: Buenas tardes muchachos
                             </small>
+                        </div>
+                        <div class="indicativos">
                             <small id="time">
                                 12:00 pm
                             </small>
@@ -111,35 +165,42 @@
 
                     <article>
                         <img src="./imagenes/julian.JPG">
-                        <div>
+                        <div class="name-text">
                             <p>
                                 Julián
                             </p>
-                            <span class="material-icons visto">
-                                mic
-                            </span>
-                            <small>
-                                2:56
-                            </small>
+                            <div>
+                                <span class="material-icons visto">
+                                    mic
+                                </span>
+                                <small>
+                                    2:56
+                                </small>
+                            </div>
+                        </div>
+                        <div class="indicativos">                            
                             <small id="time">
                                 12:58 pm
                             </small>
-
                         </div>
                     </article>
 
                     <article>
                         <img src="./imagenes/yesica.JPG">
-                        <div>
+                        <div class="name-text">
                             <p>
                                 Yesica
                             </p>
-                            <span class="material-icons ignorado">
-                                done_all
-                            </span>
-                            <small>
-                                hola
-                            </small>
+                            <div>
+                                <span class="material-icons ignorado">
+                                    done_all
+                                </span>
+                                <small>
+                                    hola
+                                </small> 
+                            </div>                           
+                        </div>
+                        <div class="indicativos">
                             <small id="time">
                                 11:02 am
                             </small>
@@ -148,16 +209,20 @@
 
                     <article onclick="mostrar();">
                         <img src="./imagenes/pp.jfif">
-                        <div>
+                        <div class="name-text">
                             <p>
                                 Vick
                             </p>
-                            <span class="material-icons perdida">
-                                missed_video_call
-                            </span>
-                            <small>
-                                Videollamada perdida
-                            </small>
+                            <div>
+                                <span class="material-icons perdida">
+                                    missed_video_call
+                                </span>
+                                <small>
+                                    Videollamada perdida
+                                </small>
+                            </div>                            
+                        </div>
+                        <div class="indicativos">
                             <small id="time">
                                 1:00 pm
                             </small>
@@ -165,13 +230,15 @@
                     </article>
                     <article>
                         <img src="./imagenes/adsi.JPG">
-                        <div>
+                        <div class="name-text">
                             <p>
                                 ADSI 2339898
                             </p>
                             <small>
                                 Intructor: Buenas tardes muchachos
-                            </small>
+                            </small>                            
+                        </div>
+                        <div class="indicativos">
                             <small id="time">
                                 12:00 pm
                             </small>
@@ -185,90 +252,82 @@
 
                     <article>
                         <img src="./imagenes/julian.JPG">
-                        <div>
+                        <div class="name-text">
                             <p>
                                 Julián
                             </p>
-                            <span class="material-icons right ignorado">
-                                volume_off
-                            </span>
                             <small>
                                 Y mi código?
-                            </small>
+                            </small>                           
+                        </div>
+                        <div class="indicativos">
                             <small id="time">
                                 12:58 pm
                             </small>
-
+                            <span class="material-icons ignorado">
+                                volume_off
+                            </span>
                         </div>
                     </article>
 
                     <article>
                         <img src="./imagenes/yesica.JPG">
-                        <div>
+                        <div class="name-text">
                             <p>
                                 Yesica
                             </p>
-                            <span class="material-icons perdida">
-                                missed_video_call
-                            </span>
-                            <small>
-                                Videollamada perdida
-                            </small>
+                            <div>
+                                <span class="material-icons perdida">
+                                    missed_video_call
+                                </span>
+                                <small>
+                                    Videollamada perdida
+                                </small>
+                            </div>                            
+                        </div>
+                        <div class="indicativos">
                             <small id="time">
                                 11:02 am
-                            </small>
-                        </div>
-                    </article>
-
-                    <article>
-                        <img src="./imagenes/vick.jfif">
-                        <div>
-                            <p>
-                                Victoria
-                            </p>
-                            <span class="material-icons right ignorado ancla-girada">
-                                push_pin
-                            </span>
-                            <small>
-                                Ah bueno
-                            </small>
-                            <small id="time">
-                                1:00 pm
                             </small>
                         </div>
                     </article>
 
                     <article>
                         <img src="./imagenes/julian.JPG">
-                        <div>
+                        <div class="name-text">
                             <p>
                                 Julián
                             </p>
-                            <span class="material-icons right ignorado">
-                                volume_off
-                            </span>
                             <small>
                                 Y mi código?
-                            </small>
+                            </small>                            
+                        </div>
+                        <div class="indicativos">
                             <small id="time">
                                 12:58 pm
                             </small>
-
+                            <span class="material-icons ignorado">
+                                volume_off
+                            </span>
                         </div>
                     </article>
 
                     <article>
                         <img src="./imagenes/yesica.JPG">
-                        <div>
+                        <div class="name-text"> 
                             <p>
                                 Yesica
                             </p>
-                            <span class="material-icons perdida">
-                                phone_missed
-                            </span>
-                            <small>
-                                Llamada perdida
-                            </small>
+                            <div>
+                                <span class="material-icons perdida">
+                                    phone_missed
+                                </span>
+                                <small>
+                                    Llamada perdida
+                                </small>
+                            </div>                            
+                        </div>
+                        <div class="indicativos">
                             <small id="time">
                                 11:02 am
                             </small>
@@ -277,16 +336,20 @@
 
                     <article>
                         <img src="./imagenes/vick.jfif">
-                        <div>
+                        <div class="name-text">
                             <p>
                                 Victoria
                             </p>
-                            <span class="material-icons ignorado">
-                                mic
-                            </span>
-                            <small>
-                                1:12
-                            </small>
+                            <div>
+                                <span class="material-icons ignorado">
+                                    mic
+                                </span>
+                                <small>
+                                    1:12
+                                </small>  
+                            </div>                          
+                        </div>
+                        <div class="indicativos">
                             <small id="time">
                                 1:00 pm
                             </small>
@@ -294,13 +357,15 @@
                     </article>
                     <article>
                         <img src="./imagenes/adsi.JPG">
-                        <div>
+                        <div class="name-text">
                             <p>
                                 ADSI 2339898
                             </p>
                             <small>
                                 Intructor: Buenas tardes muchachos
-                            </small>
+                            </small>                            
+                        </div>
+                        <div class="indicativos">
                             <small id="time">
                                 12:00 pm
                             </small>
@@ -314,20 +379,23 @@
 
                     <article>
                         <img src="./imagenes/julian.JPG">
-                        <div>
+                        <div class="name-text">
                             <p>
                                 Julián
                             </p>
-                            <span class="material-icons ignorado">
-                                check
-                            </span>
-                            <small>
-                                Y mi código?
-                            </small>
+                            <div>
+                                <span class="material-icons ignorado">
+                                    check
+                                </span>
+                                <small>
+                                    Y mi código?
+                                </small> 
+                            </div>                           
+                        </div>
+                        <div class="indicativos">
                             <small id="time">
                                 12:58 pm
                             </small>
-
                         </div>
                     </article>
                 </section>
@@ -341,7 +409,7 @@
                                     stroke-dasharray="71.40 4" stroke-dashoffset="265">
                             </svg>
                         </div>
-                        <div>
+                        <div class="state-name">
                             <p>
                                 Mi estado
                             </p>
@@ -349,9 +417,11 @@
                                 Ayer, 611 p. m.
                             </small>
                         </div>
-                        <span class="material-icons">
-                            more_vert
-                        </span>
+                        <div class="span">
+                            <span class="material-icons">
+                                more_vert
+                            </span>
+                        </div>
                     </article>
 
                     <small class="spam">
@@ -366,7 +436,7 @@
                                     stroke-dasharray="71.40 4" stroke-dashoffset="265">
                             </svg>
                         </div>
-                        <div>
+                        <div class="state-name">
                             <p>
                                 Andres Quiros
                             </p>
@@ -374,9 +444,6 @@
                                 Ayer, 2:45 p. m.
                             </small>
                         </div>
-                        <span class="material-icons">
-                            more_vert
-                        </span>
                     </article>
 
                     <article>
@@ -387,7 +454,7 @@
                                     stroke-dasharray="5.40 1" stroke-dashoffset="265">
                             </svg>
                         </div>
-                        <div>
+                        <div class="state-name">
                             <p>
                                 Instructor
                             </p>
@@ -395,9 +462,6 @@
                                 Ayer, 1:11 p. m.
                             </small>
                         </div>
-                        <span class="material-icons">
-                            more_vert
-                        </span>
                     </article>
 
                     <small class="spam">
@@ -412,7 +476,7 @@
                                     stroke-dasharray="2.40 2" stroke-dashoffset="265">
                             </svg>
                         </div>
-                        <div>
+                        <div class="state-name">
                             <p>
                                 Junior
                             </p>
@@ -420,9 +484,6 @@
                                 Ayer, 5:00 p. m.
                             </small>
                         </div>
-                        <span class="material-icons">
-                            more_vert
-                        </span>
                     </article>
 
                     <article>
@@ -433,7 +494,7 @@
                                     stroke-dasharray="11.40 4" stroke-dashoffset="265">
                             </svg>
                         </div>
-                        <div>
+                        <div class="state-name">
                             <p>
                                 Mamá
                             </p>
@@ -441,9 +502,6 @@
                                 Ayer, 2:21 a. m.
                             </small>
                         </div>
-                        <span class="material-icons">
-                            more_vert
-                        </span>
                     </article>
 
                     <article>
@@ -454,7 +512,7 @@
                                     stroke-dasharray="12.40 4" stroke-dashoffset="265">
                             </svg>
                         </div>
-                        <div>
+                        <div class="state-name">
                             <p>
                                 Aleja
                             </p>
@@ -462,16 +520,13 @@
                                 Ayer, 12:11 p. m.
                             </small>
                         </div>
-                        <span class="material-icons">
-                            more_vert
-                        </span>
                     </article>
                 </section>
 
                 <section id="section-call">
                     <article>
                         <img src="./imagenes/julian.JPG" alt="">
-                        <div>
+                        <div class="call-name">
                             <p>
                                 Julian
                             </p>
@@ -484,14 +539,14 @@
                                 </small>
                             </div>
                         </div>
-                        <span class="material-icons">
+                        <span class="material-icons ignorado">
                             phone
                         </span>
                     </article>
 
                     <article>
                         <img src="./imagenes/pp.jfif" alt="">
-                        <div>
+                        <div class="call-name">
                             <p>
                                 Vick
                             </p>
@@ -504,14 +559,14 @@
                                 </small>
                             </div>
                         </div>
-                        <span class="material-icons">
+                        <span class="material-icons ignorado">
                             videocam
                         </span>
                     </article>
 
                     <article>
                         <img src="./imagenes/adsi.JPG" alt="">
-                        <div>
+                        <div class="call-name">
                             <p>
                                 ADSI 2339898
                             </p>
@@ -524,14 +579,14 @@
                                 </small>
                             </div>
                         </div>
-                        <span class="material-icons">
+                        <span class="material-icons ignorado">
                             phone
                         </span>
                     </article>
 
                     <article>
                         <img src="./imagenes/julian.JPG" alt="">
-                        <div>
+                        <div class="call-name">
                             <p>
                                 Julian
                             </p>
@@ -544,14 +599,14 @@
                                 </small>
                             </div>
                         </div>
-                        <span class="material-icons">
+                        <span class="material-icons ignorado">
                             phone
                         </span>
                     </article>
 
                     <article>
                         <img src="./imagenes/pp.jfif" alt="">
-                        <div>
+                        <div class="call-name">
                             <p>
                                 Vick
                             </p>
@@ -564,14 +619,14 @@
                                 </small>
                             </div>
                         </div>
-                        <span class="material-icons">
+                        <span class="material-icons ignorado">
                             videocam
                         </span>
                     </article>
 
                     <article>
                         <img src="./imagenes/adsi.JPG" alt="">
-                        <div>
+                        <div class="call-name">
                             <p>
                                 ADSI 2339898
                             </p>
@@ -584,13 +639,13 @@
                                 </small>
                             </div>
                         </div>
-                        <span class="material-icons">
+                        <span class="material-icons ignorado">
                             phone
                         </span>
                     </article>
                     <article>
                         <img src="./imagenes/julian.JPG" alt="">
-                        <div>
+                        <div class="call-name">
                             <p>
                                 Julian
                             </p>
@@ -603,14 +658,14 @@
                                 </small>
                             </div>
                         </div>
-                        <span class="material-icons">
+                        <span class="material-icons ignorado">
                             phone
                         </span>
                     </article>
 
                     <article>
                         <img src="./imagenes/pp.jfif" alt="">
-                        <div>
+                        <div class="call-name">
                             <p>
                                 Vick
                             </p>
@@ -623,14 +678,14 @@
                                 </small>
                             </div>
                         </div>
-                        <span class="material-icons">
+                        <span class="material-icons ignorado">
                             videocam
                         </span>
                     </article>
 
                     <article>
                         <img src="./imagenes/adsi.JPG" alt="">
-                        <div>
+                        <div class="call-name">
                             <p>
                                 ADSI 2339898
                             </p>
@@ -643,13 +698,13 @@
                                 </small>
                             </div>
                         </div>
-                        <span class="material-icons">
+                        <span class="material-icons ignorado">
                             phone
                         </span>
                     </article>
                     <article>
                         <img src="./imagenes/julian.JPG" alt="">
-                        <div>
+                        <div class="call-name">
                             <p>
                                 Julian
                             </p>
@@ -662,14 +717,14 @@
                                 </small>
                             </div>
                         </div>
-                        <span class="material-icons">
+                        <span class="material-icons ignorado">
                             phone
                         </span>
                     </article>
 
                     <article>
                         <img src="./imagenes/pp.jfif" alt="">
-                        <div>
+                        <div class="call-name">
                             <p>
                                 Vick
                             </p>
@@ -682,14 +737,14 @@
                                 </small>
                             </div>
                         </div>
-                        <span class="material-icons">
+                        <span class="material-icons ignorado">
                             videocam
                         </span>
                     </article>
 
                     <article>
                         <img src="./imagenes/adsi.JPG" alt="">
-                        <div>
+                        <div class="call-name">
                             <p>
                                 ADSI 2339898
                             </p>
@@ -702,7 +757,7 @@
                                 </small>
                             </div>
                         </div>
-                        <span class="material-icons">
+                        <span class="material-icons ignorado">
                             phone
                         </span>
                     </article>

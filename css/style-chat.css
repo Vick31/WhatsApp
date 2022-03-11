@@ -130,8 +130,12 @@
 #chat-person #fondo #menssage .men-2 {
   margin: 0.5rem;
   background-color: #005c4b;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 70%;
   height: auto;
-  margin-left: 25%;
+  margin-left: auto;
   border-radius: 0.6rem;
   position: relative;
   padding: 0.7rem;

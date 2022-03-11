@@ -1,12 +1,12 @@
 
 function mostrar() {
     document.getElementById('chat-person').style.right = '0';   
-    document.getElementById('cont').style.right = '100%'
+    document.getElementById('main-container').style.right = '100%'
 }
 
 function quitar() {
     document.getElementById('chat-person').style.right = '100%';
-    document.getElementById('cont').style.right = '0'
+    document.getElementById('main-container').style.right = '0'
 }
 
 function mostrar_temas() {
@@ -16,8 +16,8 @@ function mostrar_temas() {
 function tema_claro() {
     document.getElementById('nav').style.background = '#008069';
     document.getElementById('nav-chat').style.background = '#008069';
-    document.getElementById('cont').style.background = '#ffffff';
-    document.getElementById('cont').style.color = '#000';
+    document.getElementById('main-container').style.background = '#ffffff';
+    document.getElementById('main-container').style.color = '#000';
     
     var a = document.getElementsByClassName('men-1');
     for (var i = 0; i < a.length; i++) a[i].style.backgroundColor = '#ffffff';
@@ -37,8 +37,8 @@ function tema_claro() {
 function tema_oscuro() {
     document.getElementById('nav').style.background = '#202c33';
     document.getElementById('nav-chat').style.background = '#202c33';
-    document.getElementById('cont').style.background = '#111b21';
-    document.getElementById('cont').style.color = '#ffffff';
+    document.getElementById('main-container').style.background = '#111b21';
+    document.getElementById('main-container').style.color = '#ffffff';
 
     var a = document.getElementsByClassName('men-1');
     for (var i = 0; i < a.length; i++) a[i].style.backgroundColor = '#202c33';
@@ -54,3 +54,6 @@ function tema_oscuro() {
     document.getElementById('responder').style.background = '#ffffff'
     document.getElementById('temas').style.display = 'none';
 }
+
+
+tema_claro();
